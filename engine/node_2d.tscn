@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://ed58x8wm36ag"]
+
+[ext_resource type="Script" uid="uid://cc5rkkleo8up0" path="res://engine/player.gd" id="1_a2fhd"]
+[ext_resource type="Texture2D" uid="uid://brtjg464id2r6" path="res://images.jpg" id="1_s12ni"]
+[ext_resource type="Texture2D" uid="uid://cy40wwduhtpx0" path="res://engine/919a4b62-5034-48fa-b7d4-b3665a890d0f.png" id="3_wigmx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(456.5, 410)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g4v7s"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_57qmd"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yf5fn"]
+normal = Vector2(1, 0)
+distance = -1152.0
+
+[node name="Node2D" type="Node2D" unique_id=668326802]
+
+[node name="player" type="CharacterBody2D" parent="." unique_id=1115029245]
+position = Vector2(341, -764)
+collision_layer = 2
+script = ExtResource("1_a2fhd")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=1561040951]
+visibility_layer = 2
+position = Vector2(25, 0.75)
+shape = SubResource("RectangleShape2D_yf5fn")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="player" unique_id=252740452]
+position = Vector2(24.000015, 0)
+scale = Vector2(0.86990285, 1)
+texture = ExtResource("1_s12ni")
+metadata/_edit_group_ = true
+
+[node name="hitbox" type="Area2D" parent="player" unique_id=1636232175]
+position = Vector2(24, 0)
+scale = Vector2(0.86990285, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player/hitbox" unique_id=1238306185]
+disabled = true
+
+[node name="hurtbox" type="Area2D" parent="player" unique_id=1760225689]
+position = Vector2(24, 0)
+scale = Vector2(0.86990285, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player/hurtbox" unique_id=1646887217]
+
+[node name="floor" type="StaticBody2D" parent="." unique_id=2036993518]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor" unique_id=1496348718]
+position = Vector2(0, 648)
+shape = SubResource("WorldBoundaryShape2D_g4v7s")
+
+[node name="leftWall" type="StaticBody2D" parent="." unique_id=2081731394]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leftWall" unique_id=2146654448]
+shape = SubResource("WorldBoundaryShape2D_57qmd")
+
+[node name="rightWall" type="StaticBody2D" parent="." unique_id=695544970]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rightWall" unique_id=1055008687]
+rotation = -3.1415927
+shape = SubResource("WorldBoundaryShape2D_yf5fn")
+
+[node name="player2" type="CharacterBody2D" parent="." unique_id=1075901766]
+position = Vector2(810, -797)
+collision_layer = 2
+script = ExtResource("1_a2fhd")
+player_id = 2
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="player2" unique_id=823128897]
+position = Vector2(28.250067, -6.0000153)
+scale = Vector2(0.4150508, 0.28236914)
+texture = ExtResource("3_wigmx")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player2" unique_id=1105455371]
+visibility_layer = 2
+position = Vector2(26.75, -6)
+shape = SubResource("RectangleShape2D_yf5fn")
+metadata/_edit_group_ = true

@@ -1,0 +1,13 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Godot editor binaries
+*.exe
+
+# Old prototype project
+/game/
+*.png
+919a4b62-5034-48fa-b7d4-b3665a890d0f.png.import
+images.jpg
+images.jpg.import
