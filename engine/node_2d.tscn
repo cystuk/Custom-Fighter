@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://cc5rkkleo8up0" path="res://engine/player.gd" id="1_a2fhd"]
 [ext_resource type="Texture2D" uid="uid://brtjg464id2r6" path="res://images.jpg" id="1_s12ni"]
-[ext_resource type="Texture2D" uid="uid://cy40wwduhtpx0" path="res://engine/919a4b62-5034-48fa-b7d4-b3665a890d0f.png" id="3_wigmx"]
+[ext_resource type="Texture2D" uid="uid://cy40wwduhtpx0" path="res://919a4b62-5034-48fa-b7d4-b3665a890d0f.png" id="3_wigmx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
-size = Vector2(456.5, 410)
+size = Vector2(221.25, 209.75)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g4v7s"]
 
@@ -19,20 +19,21 @@ distance = -1152.0
 [node name="Node2D" type="Node2D" unique_id=668326802]
 
 [node name="player" type="CharacterBody2D" parent="." unique_id=1115029245]
-position = Vector2(341, -764)
+position = Vector2(323, 200)
 collision_layer = 2
 script = ExtResource("1_a2fhd")
+player_id = null
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=1561040951]
 visibility_layer = 2
-position = Vector2(25, 0.75)
+position = Vector2(-92.625, 100.875)
 shape = SubResource("RectangleShape2D_yf5fn")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="player" unique_id=252740452]
-position = Vector2(24.000015, 0)
-scale = Vector2(0.86990285, 1)
+position = Vector2(-94.000015, 102.999985)
+scale = Vector2(0.43300965, 0.5515464)
 texture = ExtResource("1_s12ni")
 metadata/_edit_group_ = true
 
@@ -67,15 +68,15 @@ rotation = -3.1415927
 shape = SubResource("WorldBoundaryShape2D_yf5fn")
 
 [node name="player2" type="CharacterBody2D" parent="." unique_id=1075901766]
-position = Vector2(810, -797)
+position = Vector2(981, 440)
 collision_layer = 2
 script = ExtResource("1_a2fhd")
 player_id = 2
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="player2" unique_id=823128897]
-position = Vector2(28.250067, -6.0000153)
-scale = Vector2(0.4150508, 0.28236914)
+position = Vector2(27.000015, -6.9999657)
+scale = Vector2(0.20129268, 0.14325069)
 texture = ExtResource("3_wigmx")
 metadata/_edit_group_ = true
 

@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://u4w78oc20pcn"]
+
+[ext_resource type="Script" uid="uid://dvjx7rcm605r4" path="res://engine/main_menu.gd" id="1_sdjmo"]
+
+[node name="mainMenu" type="Control" unique_id=1183155984]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sdjmo")
+metadata/_edit_group_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1287233227]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer" unique_id=1862756153]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="CenterContainer/HBoxContainer" unique_id=330398631]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+text = "Play"
+metadata/_edit_group_ = true
+
+[node name="Settings" type="Button" parent="CenterContainer/HBoxContainer" unique_id=247268861]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+text = "Settings"
+metadata/_edit_group_ = true
+
+[connection signal="pressed" from="CenterContainer/HBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/Settings" to="." method="_on_settings_pressed"]
